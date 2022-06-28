@@ -14,6 +14,10 @@ const doc = {
 }
 
 const outPutFile = './src/docs/swagger.yaml';
-const endPointsFiles = ['./src/routes/livro.js'];
+const endPointsFiles = ['./src/routes/livro.js',
+                        './src/routes/locacao.js',
+                        './src/routes/genero.js',
+                        './src/routes/funcionario.js',
+                        './src/routes/estudante.js'];
 
 swaggerAutogen(outPutFile, endPointsFiles, doc)

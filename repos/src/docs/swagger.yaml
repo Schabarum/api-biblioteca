@@ -3,7 +3,7 @@
   "info": {
     "version": "1.0.0",
     "title": "API BIBLIOTECA HORUS",
-    "description": "Documentação da API Horus Biblioteca"
+    "description": "Documentação das API's da Biblioteca Horus"
   },
   "host": "localhost:3000",
   "basePath": "",
@@ -17,8 +17,10 @@
     "application/json"
   ],
   "paths": {
-    "/livro": {
+    "/livro": {,
       "get": {
+      "tags": ["Livro"],
+        "summary": "Endpoint resposável por retornar os dados da tabela",
         "description": "",
         "parameters": [],
         "responses": {
@@ -31,6 +33,8 @@
         }
       },
       "post": {
+        "tags": ["Livro"],
+        "summary": "Endpoint resposável por inserir os dados na tabela",
         "description": "",
         "parameters": [],
         "responses": {
@@ -43,8 +47,10 @@
         }
       }
     },
-    "/aluno/{id}": {
-      "delete": {
+    "/livro/{id}": {
+      "patch": {
+        "tags": ["Livro"],
+        "summary": "Endpoint resposável por atualizar todos os dados de colunas especificas da tabela",
         "description": "",
         "parameters": [
           {
@@ -52,6 +58,18 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
@@ -60,7 +78,9 @@
           }
         }
       },
-      "patch": {
+      "put": {
+        "tags": ["Livro"],
+        "summary": "Endpoint resposável por atualizar todos os dados da tabela",
         "description": "",
         "parameters": [
           {
@@ -90,8 +110,357 @@
             "description": "Erro Interno do Servidor"
           }
         }
+      }
+    },
+    "/locacao": {
+      "get": {
+        "tags": ["Locacao"],
+        "summary": "Endpoint resposável por retornar os dados da tabela",
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          },
+          "500": {
+            "description": "Erro Interno do Servidor"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Locacao"],
+        "summary": "Endpoint resposável por inserir os dados na tabela",
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          },
+          "500": {
+            "description": "Erro Interno do Servidor"
+          }
+        }
+      }
+    },
+    "/locacao/{id}": {
+      "patch": {
+        "tags": ["Locacao"],
+        "summary": "Endpoint resposável por atualizar todos os dados de colunas especificas da tabela",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Erro Interno do Servidor"
+          }
+        }
       },
       "put": {
+        "tags": ["Locacao"],
+        "summary": "Endpoint resposável por atualizar todos os dados da tabela",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Erro Interno do Servidor"
+          }
+        }
+      }
+    },
+    "/genero": {
+      "get": {
+        "tags": ["Genero"],
+        "summary": "Endpoint resposável por retornar os dados da tabela",
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          },
+          "500": {
+            "description": "Erro Interno do Servidor"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Genero"],
+        "summary": "Endpoint resposável por inserir os dados na tabela",
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          },
+          "500": {
+            "description": "Erro Interno do Servidor"
+          }
+        }
+      }
+    },
+    "/genero/{id}": {
+      "patch": {
+        "tags": ["Genero"],
+        "summary": "Endpoint resposável por atualizar todos os dados de colunas especificas da tabela",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Erro Interno do Servidor"
+          }
+        }
+      },
+      "put": {
+        "tags": ["Genero"],
+        "summary": "Endpoint resposável por atualizar todos os dados da tabela",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Erro Interno do Servidor"
+          }
+        }
+      }
+    },
+    "/funcionario": {
+      "get": {
+        "tags": ["Funcionario"],
+        "summary": "Endpoint resposável por retornar os dados da tabela",
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          },
+          "500": {
+            "description": "Erro Interno do Servidor"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Funcionario"],
+        "summary": "Endpoint resposável por inserir os dados na tabela",
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          },
+          "500": {
+            "description": "Erro Interno do Servidor"
+          }
+        }
+      }
+    },
+    "/funcionario/{id}": {
+      "patch": {
+        "tags": ["Funcionario"],
+        "summary": "Endpoint resposável por atualizar todos os dados de colunas especificas da tabela",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Erro Interno do Servidor"
+          }
+        }
+      },
+      "put": {
+        "tags": ["Funcionario"],
+        "summary": "Endpoint resposável por atualizar todos os dados da tabela",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Erro Interno do Servidor"
+          }
+        }
+      }
+    },
+    "/estudante": {
+      "get": {
+        "tags": ["Estudante"],
+        "summary": "Endpoint resposável por retornar os dados da tabela",
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          },
+          "500": {
+            "description": "Erro Interno do Servidor"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Estudante"],
+        "summary": "Endpoint resposável por inserir os dados na tabela",
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Criado"
+          },
+          "500": {
+            "description": "Erro Interno do Servidor"
+          }
+        }
+      }
+    },
+    "/estudante/{id}": {
+      "patch": {
+        "tags": ["Estudante"],
+        "summary": "Endpoint resposável por atualizar todos os dados de colunas especificas da tabela",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Erro Interno do Servidor"
+          }
+        }
+      },
+      "put": {
+        "tags": ["Estudante"],
+        "summary": "Endpoint resposável por atualizar todos os dados da tabela",
         "description": "",
         "parameters": [
           {

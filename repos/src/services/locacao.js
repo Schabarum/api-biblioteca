@@ -1,4 +1,4 @@
-const db = require('../configs/pg')
+const db = require ('../configs/pg')
 
 // Sql
 const cSql_get_all = 
@@ -83,8 +83,8 @@ const updatePutLocacao = async(params) => {
 }
 
 // Exports
-module.exports.getLocacao = getLocacao
-module.exports.postLocacao = postLocacao
-module.exports.deleteLocacao = deleteLocacao
+module.exports.getLocacao         = getLocacao
+module.exports.postLocacao        = postLocacao
+module.exports.deleteLocacao      = deleteLocacao
 module.exports.updatePatchLocacao = updatePatchLocacao
-module.exports.updatePutLocacao = updatePutLocacao
+module.exports.updatePutLocacao   = updatePutLocacao
