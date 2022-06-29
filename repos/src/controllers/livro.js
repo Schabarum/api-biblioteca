@@ -1,4 +1,3 @@
-const livro = require('../routes/livro')
 let livroService = require('../services/livro')
 
 const getLivro = async(req,res,next) => {

@@ -1,4 +1,3 @@
-const funcionario = require('../routes/funcionario')
 let funcionarioService = require('../services/funcionario')
 
 const getFuncionario = async(req,res,next) => {

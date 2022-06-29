@@ -17,40 +17,61 @@
     "application/json"
   ],
   "paths": {
-    "/livro": {,
+    "/livro": {
       "get": {
-      "tags": ["Livro"],
-        "summary": "Endpoint resposável por retornar os dados da tabela",
+        "tags": ["Livro"],
+        "summary": "Endpoint para retornar os dados dos livros",
         "description": "",
         "parameters": [],
         "responses": {
           "201": {
-            "description": "Criado"
+            "description": "Sucess!"
           },
           "500": {
-            "description": "Erro Interno do Servidor"
+            "description": "Internal error"
           }
         }
       },
       "post": {
         "tags": ["Livro"],
-        "summary": "Endpoint resposável por inserir os dados na tabela",
+        "summary": "Endpoint para inserir os dados do livro",
         "description": "",
         "parameters": [],
         "responses": {
           "201": {
-            "description": "Criado"
+            "description": "Sucess!"
           },
           "500": {
-            "description": "Erro Interno do Servidor"
+            "description": "Internal error"
           }
         }
       }
     },
     "/livro/{id}": {
+      "delete": {
+        "tags": ["Livro"],
+        "summary": "Endpoint para excluir os dados de um determinado livro",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Sucess!"
+          },
+          "500": {
+            "description": "Internal error"
+          }
+        }
+      },
       "patch": {
         "tags": ["Livro"],
-        "summary": "Endpoint resposável por atualizar todos os dados de colunas especificas da tabela",
+        "summary": "Endpoint para atualizar dados especificos do livro",
         "description": "",
         "parameters": [
           {
@@ -74,13 +95,13 @@
         ],
         "responses": {
           "500": {
-            "description": "Erro Interno do Servidor"
+            "description": "Internal error"
           }
         }
       },
       "put": {
         "tags": ["Livro"],
-        "summary": "Endpoint resposável por atualizar todos os dados da tabela",
+        "summary": "Endpoint para atualizar todo os dados do livro",
         "description": "",
         "parameters": [
           {
@@ -104,48 +125,69 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Sucess!"
           },
           "500": {
-            "description": "Erro Interno do Servidor"
+            "description": "Internal error"
           }
         }
       }
     },
     "/locacao": {
       "get": {
+        "summary": "Endpoint para retornar os dados da locacao",
         "tags": ["Locacao"],
-        "summary": "Endpoint resposável por retornar os dados da tabela",
         "description": "",
         "parameters": [],
         "responses": {
           "201": {
-            "description": "Criado"
+            "description": "Sucess!"
           },
           "500": {
-            "description": "Erro Interno do Servidor"
+            "description": "Internal error"
           }
         }
       },
       "post": {
         "tags": ["Locacao"],
-        "summary": "Endpoint resposável por inserir os dados na tabela",
+        "summary": "Endpoint para inserir os dados da locacao",
         "description": "",
         "parameters": [],
         "responses": {
           "201": {
-            "description": "Criado"
+            "description": "Sucess!"
           },
           "500": {
-            "description": "Erro Interno do Servidor"
+            "description": "Internal error"
           }
         }
       }
     },
     "/locacao/{id}": {
+      "delete": {
+        "tags": ["Locacao"],
+        "summary": "Endpoint para excluir os dados de um determinada locacao",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Sucess!"
+          },
+          "500": {
+            "description": "Internal error"
+          }
+        }
+      },
       "patch": {
         "tags": ["Locacao"],
-        "summary": "Endpoint resposável por atualizar todos os dados de colunas especificas da tabela",
+        "summary": "Endpoint para atualizar dados especificos do locacao",
         "description": "",
         "parameters": [
           {
@@ -169,13 +211,13 @@
         ],
         "responses": {
           "500": {
-            "description": "Erro Interno do Servidor"
+            "description": "Internal error"
           }
         }
       },
       "put": {
         "tags": ["Locacao"],
-        "summary": "Endpoint resposável por atualizar todos os dados da tabela",
+        "summary": "Endpoint para atualizar todo os dados da locacao",
         "description": "",
         "parameters": [
           {
@@ -199,48 +241,69 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Sucess!"
           },
           "500": {
-            "description": "Erro Interno do Servidor"
+            "description": "Internal error"
           }
         }
       }
     },
     "/genero": {
       "get": {
+        "summary": "Endpoint para retornar os dados do genero",
         "tags": ["Genero"],
-        "summary": "Endpoint resposável por retornar os dados da tabela",
         "description": "",
         "parameters": [],
         "responses": {
           "201": {
-            "description": "Criado"
+            "description": "Sucess!"
           },
           "500": {
-            "description": "Erro Interno do Servidor"
+            "description": "Internal error"
           }
         }
       },
       "post": {
         "tags": ["Genero"],
-        "summary": "Endpoint resposável por inserir os dados na tabela",
+        "summary": "Endpoint para inserir os dados do genero",
         "description": "",
         "parameters": [],
         "responses": {
           "201": {
-            "description": "Criado"
+            "description": "Sucess!"
           },
           "500": {
-            "description": "Erro Interno do Servidor"
+            "description": "Internal error"
           }
         }
       }
     },
     "/genero/{id}": {
+      "delete": {
+        "tags": ["Genero"],
+        "summary": "Endpoint para excluir os dados de um determinado genero",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Sucess!"
+          },
+          "500": {
+            "description": "Internal error"
+          }
+        }
+      },
       "patch": {
         "tags": ["Genero"],
-        "summary": "Endpoint resposável por atualizar todos os dados de colunas especificas da tabela",
+        "summary": "Endpoint para atualizar dados especificos do genero",
         "description": "",
         "parameters": [
           {
@@ -264,13 +327,13 @@
         ],
         "responses": {
           "500": {
-            "description": "Erro Interno do Servidor"
+            "description": "Internal error"
           }
         }
       },
       "put": {
         "tags": ["Genero"],
-        "summary": "Endpoint resposável por atualizar todos os dados da tabela",
+        "summary": "Endpoint para atualizar todo os dados do genero",
         "description": "",
         "parameters": [
           {
@@ -294,10 +357,10 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Sucess!"
           },
           "500": {
-            "description": "Erro Interno do Servidor"
+            "description": "Internal error"
           }
         }
       }
@@ -305,37 +368,58 @@
     "/funcionario": {
       "get": {
         "tags": ["Funcionario"],
-        "summary": "Endpoint resposável por retornar os dados da tabela",
+        "summary": "Endpoint para retornar os dados do funcionario",
         "description": "",
         "parameters": [],
         "responses": {
           "201": {
-            "description": "Criado"
+            "description": "Sucess!"
           },
           "500": {
-            "description": "Erro Interno do Servidor"
+            "description": "Internal error"
           }
         }
       },
       "post": {
         "tags": ["Funcionario"],
-        "summary": "Endpoint resposável por inserir os dados na tabela",
+        "summary": "Endpoint para inserir os dados do funcionario",
         "description": "",
         "parameters": [],
         "responses": {
           "201": {
-            "description": "Criado"
+            "description": "Sucess!"
           },
           "500": {
-            "description": "Erro Interno do Servidor"
+            "description": "Internal error"
           }
         }
       }
     },
     "/funcionario/{id}": {
+      "delete": {
+        "tags": ["Funcionario"],
+        "summary": "Endpoint para excluir os dados de um determinado funcionario",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Sucess!"
+          },
+          "500": {
+            "description": "Internal error"
+          }
+        }
+      },
       "patch": {
         "tags": ["Funcionario"],
-        "summary": "Endpoint resposável por atualizar todos os dados de colunas especificas da tabela",
+        "summary": "Endpoint para atualizar dados especificos do funcionario",
         "description": "",
         "parameters": [
           {
@@ -359,13 +443,13 @@
         ],
         "responses": {
           "500": {
-            "description": "Erro Interno do Servidor"
+            "description": "Internal error"
           }
         }
       },
       "put": {
         "tags": ["Funcionario"],
-        "summary": "Endpoint resposável por atualizar todos os dados da tabela",
+        "summary": "Endpoint para atualizar todo os dados do funcionario",
         "description": "",
         "parameters": [
           {
@@ -389,10 +473,10 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Sucess!"
           },
           "500": {
-            "description": "Erro Interno do Servidor"
+            "description": "Internal error"
           }
         }
       }
@@ -400,37 +484,58 @@
     "/estudante": {
       "get": {
         "tags": ["Estudante"],
-        "summary": "Endpoint resposável por retornar os dados da tabela",
+        "summary": "Endpoint para retornar os dados do estudante",
         "description": "",
         "parameters": [],
         "responses": {
           "201": {
-            "description": "Criado"
+            "description": "Sucess!"
           },
           "500": {
-            "description": "Erro Interno do Servidor"
+            "description": "Internal error"
           }
         }
       },
       "post": {
         "tags": ["Estudante"],
-        "summary": "Endpoint resposável por inserir os dados na tabela",
+        "summary": "Endpoint para inserir os dados do estudante",
         "description": "",
         "parameters": [],
         "responses": {
           "201": {
-            "description": "Criado"
+            "description": "Sucess!"
           },
           "500": {
-            "description": "Erro Interno do Servidor"
+            "description": "Internal error"
           }
         }
       }
     },
     "/estudante/{id}": {
+      "delete": {
+        "tags": ["Estudante"],
+        "summary": "Endpoint para excluir os dados de um determinado estudante",
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Sucess!"
+          },
+          "500": {
+            "description": "Internal error"
+          }
+        }
+      },
       "patch": {
         "tags": ["Estudante"],
-        "summary": "Endpoint resposável por atualizar todos os dados de colunas especificas da tabela",
+        "summary": "Endpoint para atualizar dados especificos do estudante",
         "description": "",
         "parameters": [
           {
@@ -460,7 +565,7 @@
       },
       "put": {
         "tags": ["Estudante"],
-        "summary": "Endpoint resposável por atualizar todos os dados da tabela",
+        "summary": "Endpoint para atualizar todo os dados do estudante",
         "description": "",
         "parameters": [
           {
@@ -484,10 +589,10 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Sucess!"
           },
           "500": {
-            "description": "Erro Interno do Servidor"
+            "description": "Internal error"
           }
         }
       }

@@ -1,4 +1,3 @@
-const estudante = require('../routes/estudante')
 let estudanteService = require('../services/estudante')
 
 const getEstudante = async(req,res,next) => {

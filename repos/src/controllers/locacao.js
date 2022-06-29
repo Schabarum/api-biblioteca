@@ -1,4 +1,3 @@
-const locacao = require('../routes/locacao')
 let locacaoService = require('../services/locacao')
 
 const getLocacao = async(req,res,next) => {

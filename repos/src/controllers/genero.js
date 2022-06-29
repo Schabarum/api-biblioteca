@@ -1,4 +1,3 @@
-const genero = require('../routes/genero')
 let generoService = require('../services/genero')
 
 const getGenero = async(req,res,next) => {
